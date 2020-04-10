@@ -13,7 +13,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: new Scaffold(
         body: new Container(
-          color: Colors.green,
+//          color: Colors.green,
           child: Column(
             children: <Widget>[
 
@@ -21,7 +21,29 @@ class _MyAppState extends State<MyApp> {
                 flex: 4,
                 child: Container(
                   color: Colors.red,
-
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Expanded(
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: new Container(
+                                child: Stack(
+                                  children: <Widget>[
+                                    Positioned(child: new Text("kskskk")),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.max,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Flexible(
@@ -59,39 +81,7 @@ class _MyAppState extends State<MyApp> {
                 flex: 4,
                 child: Container(
                   color: Colors.orange,
-                  child: ListView(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          color: Colors.grey,
-                          height: 100,
-                          width: 100,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 2,top: 20),
-                        child: Container(
-                          color: Colors.grey,
-                          height: 100,
-                          width: 100,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          color: Colors.grey,
-                          height: 100,
-                          width: 100,
-                        ),
-                      ),
-                      Container(
-                        color: Colors.grey,
-                        height: 100,
-                        width: 100,
-                      ),
-                    ],
-                  ),
+
                 ),
 
               ),
